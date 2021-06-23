@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -C filename=__FILE_NAME__ filename.o
+gcc -CE filename=__FILE_NAME__ filename.o
