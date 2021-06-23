@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -CE filename=__FILE_NAME__ -o $filename.o
+gcc -C $CFILE -o '$*.o'
