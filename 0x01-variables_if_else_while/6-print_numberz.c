@@ -9,7 +9,7 @@ int main(void)
 	int number;
 
 	number = 0;
-	while (number < 10)
+	while (number <= 9)
 	{
 		putchar(number);
 		number++;
