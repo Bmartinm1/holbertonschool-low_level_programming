@@ -11,7 +11,7 @@ int main(void)
 	number = 0;
 	while (number < 10)
 	{
-		putchar(number);
+		printf("%d", number);
 		number++;
 	}
 	return (0);
