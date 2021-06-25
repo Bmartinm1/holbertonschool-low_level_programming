@@ -9,17 +9,13 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 0);
-	{
-	printf("is positive");
-	}
-	else if(n < 0);
-	{
-	printf("is negative");
-	}
-	else;
-	{
-	printf("is zer0");
-	}
-	return (0);
+
+	printf("%d", n);
+	if (n > 0)
+		printf("is positive\n");
+	else if (n == 0)
+		printf("is zero\n");
+	else
+		printf("is negative\n");
+	
 }
