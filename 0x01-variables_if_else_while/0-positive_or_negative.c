@@ -18,5 +18,4 @@ int main(void)
 		printf("is zero\n");
 	else
 		printf("is negative\n");
-	
 }
