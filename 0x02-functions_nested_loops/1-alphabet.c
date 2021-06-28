@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main - program entry point
-*
 * print_alphabet: prints the alphabet
 *
 * Return: always 0
