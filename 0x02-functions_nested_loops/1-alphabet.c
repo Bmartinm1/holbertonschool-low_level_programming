@@ -4,7 +4,7 @@
 /**
 * main - program entry point
 *
-* print_alphabet - prints the alphabet
+* print_alphabet: prints the alphabet
 *
 * Return: always 0
 **/
