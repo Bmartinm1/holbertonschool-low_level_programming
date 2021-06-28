@@ -8,7 +8,6 @@
 **/
 void print_alphabet(void)
 {
-	int count = 0;
 	int alpha;
 
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
