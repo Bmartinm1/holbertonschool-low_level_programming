@@ -7,7 +7,7 @@
 int main(void)
 {
 	int 1 =0;
-	char str[] = "Holberton\n"
+	char str[] = "Holberton\n";
 
 	_putchar(str[1]);
 
