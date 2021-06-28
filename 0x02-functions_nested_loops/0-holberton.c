@@ -8,8 +8,8 @@ int main(void)
 {
 	int i = 0;
 	char str[] = "Holberton\n";
-
-	_putchar(str[i]);
+	for (i = 0; i < 10; i++)
+		_putchar(str[i]);
 
 	return (0);
 }
