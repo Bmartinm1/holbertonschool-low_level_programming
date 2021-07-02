@@ -1,18 +1,23 @@
 #include "holberton.h"
 
 /**
- * print_line - prints a line of n underscores
- * @n: number of underscores to print
+ * more_numbers - prints 1-14\n
  *
  */
-void print_line(int n)
+void more_numbers(void)
 {
 	int i;
+	int j = 0;
 
-	if (n > 0)
+	while (j < 10)
 	{
-		for (i = 0; i < n; i++)
-			_putchar('_');
+		for (i = 0; i <= 14; i++)
+		{
+			if (i > 9)
+				_putchar('1');
+			_putchar(i % 10 + '0');
+		}
+		j++;
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
