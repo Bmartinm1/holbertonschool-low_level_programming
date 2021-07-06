@@ -7,7 +7,6 @@
  */
 void print_rev(char *str)
 {
-	int i;
 	int length = 0;
 
 	while (*str != 0)
@@ -17,7 +16,7 @@ void print_rev(char *str)
 	}
 	str--;
 
-	while (i >= 0)
+	while (length >= 0)
 	{
 		_putchar(*str);
 		str--;
