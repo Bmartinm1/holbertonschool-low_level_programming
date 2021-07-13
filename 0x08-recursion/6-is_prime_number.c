@@ -12,10 +12,10 @@ int div(int a, int b)
 {
 	if (a % b == 0)
 		return (0);
-	else
-		return (-1);
+	else if (b == a / 2)
+		return (1);
 
-	return (div(a, b +1));
+	return (div(a, b + 1));
 }
 
 /**
