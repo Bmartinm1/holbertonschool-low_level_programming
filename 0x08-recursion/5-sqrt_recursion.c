@@ -22,7 +22,7 @@ int sqrt_finder(int a, int b)
  * Return: square root of n
  */
 
-int _sqrt_recusion(int n)
+int _sqrt_recursion(int n)
 {
 	return (sqrt_finder(n, 0));
 }
