@@ -24,5 +24,7 @@ int sqrt_finder(int a, int b)
 
 int _sqrt_recursion(int n)
 {
-	return (sqrt_finder(n, 0));
+	if (!n)
+		return (0);
+	return (sqrt_finder(1, n));
 }
