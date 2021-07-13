@@ -24,8 +24,5 @@ int sqrt_finder(int a, int b)
 
 int _sqrt_recusion(int n)
 {
-	if(!n)
-		return (0);
-	else
-		return (sqrt_finder(1, n));
+	return (sqrt_finder(n, 0));
 }
