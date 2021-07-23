@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "holberton.h"
 
-/*
- * main - program entry point
+/*********
+ * main - program entry
  * @argc: num of args
  * @argv: arg values
  *
