@@ -11,12 +11,13 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
+	if (argc && argv)
 	{
-		printf("argv[%d] is %s\n" i, argv[i]);
-	}
+		while (*argv)
+		{
+			printf("%s\n", *argv);
+			argv++;
+		}
 
 	return (0);
 }
