@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "holberton.h"
 
 /**
@@ -26,4 +27,5 @@ int main(int argc, char *argv[])
 		printf("Invalid input, please try again\n");
 
 		return (1);
+	}
 }
