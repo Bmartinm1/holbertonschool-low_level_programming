@@ -1,30 +1,33 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * array_range - Create int array
- * @min: Smol number
- * @max: Thicc number
- * Return: Pointer to new int array
+ * array_range - creates array of ints
+ * @min: start of range
+ * @max: end of range
+ * Return: array with range of ints
  */
-
 int *array_range(int min, int max)
 {
-	int *i, j;
-
-	int size = (max - min + 1);
+	int *array = 0;
+	int size = 0;
+	int x = 0;
 
 	if (min > max)
 		return (NULL);
 
-	tired = malloc(sizeof(int) * size);
+	size = max - min + 1;
 
-	if (i == NULL)
+	array = malloc(sizeof(int) * size);
+
+	if (array == NULL)
 		return (NULL);
 
-	for (j = 0; j < size; j++)
+	for (x = 0; x < size; x++)
 	{
-		tired[j] = min++;
+		array[x] = min;
+		min++;
 	}
-	return (i);
+	return (array);
 }
