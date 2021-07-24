@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
 /**
-* string_nconcat - will concatenate two strings
-*
+* string_nconcat - concatenates a string
 * @s1: first string
 * @s2: second string
 * @n: variable set greater or equal to s2
@@ -44,4 +44,3 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s3[i] = '\0';
 	return (s3);
 }
-
