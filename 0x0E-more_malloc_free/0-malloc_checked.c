@@ -8,13 +8,11 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *tired;
+	int *i;
 
-	tired = malloc(b);
-	
-	if (tired != NULL)
-	{
-		return (tired);
-	}
-	exit(98);
+	i = malloc(b);
+
+	if (i == NULL)
+		exit(98);
+	return (i);
 }
