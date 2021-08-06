@@ -9,14 +9,12 @@
 
 size_t list_len(const list_t *h)
 {
-	unsigned int nodes = 0;
-	const list_t *temp_list = h;
+	size_t nodes = 0;
 
-	while (temp_list)
+	while (h)
 	{
-		printf("[%d]\n", temp_list->len);
+		h = h->next;
 		nodes++;
-		temp_list = temp_list->next;
 	}
 	return (nodes);
 }	
