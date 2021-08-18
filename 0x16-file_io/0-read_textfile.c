@@ -1,36 +1,52 @@
 #include "holberton.h"
 
 /**
- * create_file - creates a file
- * @filename: name of file pointer
- * @text_content: pointer to string intended for the new file
+ * read_textfile - read text file and print to stdout
+ * @filename: Pointer to target file
+ * @letters: number of characters to print to stdout
  *
- * Return: -1 on fail, 1 on success
+ * Return: Number of characters read, 0 at EoF
  */
-int create_file(const char *filename, char *text_content)
+
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	int status;
+	int total = 0;
+	int written;
+	char *buffer;
 
-	if (!filename)
-		return (-1);
+	if (!filename || !letters)
+		return (0);
 
-	if (!text_content)
-		text_content = "";
+	buffer = malloc(sizeof(char) * letters);
 
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+	if (!buffer)
+		return (0);
+
+	fd = open(filename, O_RDONLY);
 
 	if (fd == -1)
-		return (-1);
+	{
+		free(buffer);
+		return (0);
+	}
 
-	status = write(fd, text_content, strlen(text_content));
+	total = read(fd, buffer, letters);
 
-	if (status == -1)
+	if (total == -1)
 	{
 		close(fd);
-		return (-1);
+		free(buffer);
+		return (0);
 	}
+
+	written = write(STDOUT_FILENO, buffer, total);
+
+	free(buffer);
 	close(fd);
 
-	return (1);
+	if (written != total)
+		return (0);
+
+	return (written);
 }
